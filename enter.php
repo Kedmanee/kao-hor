@@ -46,7 +46,7 @@
             <a class="nav-link" href="profile.html">ข้อมูลผู้ใช้</a>
           </li>
           <li class="nav-item">
-            <a href="enter.php?logout='1'">ออกจากระบบ</a>
+            <a class="nav-link" href="enter.php?logout='1'">ออกจากระบบ</a>
           </li>
         </ul>
       </div>
