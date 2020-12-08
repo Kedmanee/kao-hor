@@ -16,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237, 228, 184)">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(227, 119, 80);">
-      <a class="navbar-brand" href="enter.php">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: rgb(227, 119, 80);">
+      <a class="navbar-brand" href="index.php">
         <img src="nav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         KaoHor
       </a>
@@ -25,9 +25,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="enter.php">เข้าสู่หอพัก<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">เข้าสู่หอพัก<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="regis.php">ลงทะเบียน</a>
