@@ -28,18 +28,6 @@
             array_push($errors, "กรุณาใส่รหัสผ่าน");
             $_SESSION['error'] = "กรุณาใส่รหัสผ่าน";
         }
-        if (empty($nametitle)) {
-            array_push($errors, "คำนำหน้า");
-            $_SESSION['error'] = "คำนำหน้า";
-        }
-        if (empty($name)) {
-            array_push($errors, "กรุณาใส่ชื่อ");
-            $_SESSION['error'] = "กรุณาใส่ชื่อ";
-        }
-        if (empty($surname)) {
-            array_push($errors, "กรุณาใส่นามสกุล");
-            $_SESSION['error'] = "กรุณาใส่นามสกุล";
-        }
         if ($password1 != $password2) {
             array_push($errors, "รหัสผ่านไม่ตรงกัน");
             $_SESSION['error'] = "รหัสผ่านไม่ตรงกัน";
@@ -56,16 +44,16 @@
         }
 
         if (count($errors) == 0) {
-            $password = md5($password1);
+            $password = $password1;
 
             $sql = "INSERT INTO user (nametitle, name, surname, dateofbirth, age, blood, address, email, phone, studentid, password, facalty, branch) VALUES ('$nametitle', '$name', '$surname', '$birth', '$age', '$blood', '$address', '$email', '$phonenum', '$studentid', '$password', '$facalty', '$branch')";
             mysqli_query($conn, $sql);
             $_SESSION['studentid'] = $studentid;
             $_SESSION['success'] = "เข้าสู่ระบบเรียบร้อย";
-            header('location: enter.php');
+            header('location: index.php');
         } else {
-            array_push($errors, "เกิดข้อผิดพลาด! กรุณาลองใหม่");
-            $_SESSION['error'] = "เกิดข้อผิดพลาด! กรุณาลองใหม่";
+            array_push($errors, "เกิดข้อผิดพลาด! กรุณากรอกข้อมูลใหม่");
+            $_SESSION['error'] = "เกิดข้อผิดพลาด! กรุณากรอกข้อมูลใหม่";
             header("location: regis.php");
         }
     }
