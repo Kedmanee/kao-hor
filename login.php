@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
-  <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237, 228, 184)">
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: rgb(227, 119, 80);">
+  <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237, 228, 184);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(227, 119, 80);">
       <a class="navbar-brand" href="index.php">
         <img src="nav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         KaoHor
@@ -38,21 +38,8 @@
         </ul>
       </div>
     </nav>
-    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 35px;">
+    <div class="container p-3 shadow mb-5 bg-white rounded" style="margin-top: 35px;">
     <form action="login_db.php" method="post">
-    <?php include('errors.php'); ?>
-        <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error" style="color: rgb(255, 51, 51)">
-                <center>
-                <h3>
-                    <?php 
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                    ?>
-                </h3>
-                </center>
-            </div>
-        <?php endif ?>
   <div class="form-group">
     <label for="student_id">เลขประจำตัวนักศึกษา</label>
     <input type="username" name="student_id" class="form-control" id="exampleInputUsername1">
@@ -63,7 +50,20 @@
   </div>
   <div class="form-group form-check">
   </div>
-  <center><button type="submit" class="btn" name="loginuser" style="background-color: rgb(235, 191, 123); color: white;">เข้าสู่ระบบ</button></center>
+  <?php include('errors.php'); ?>
+        <?php if (isset($_SESSION['error'])) : ?>
+            <center>
+            <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
+                <p style="margin:10px">
+                    <?php 
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    ?>
+                </p> 
+            </div>
+            </center>
+        <?php endif ?>
+  <center><button type="submit" class="btn" name="loginuser" style="background-color: rgb(235, 191, 123); color: white; margin-top: 15px;">เข้าสู่ระบบ</button></center>
 </form>
 </div>
 
