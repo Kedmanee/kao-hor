@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include('server.php');
+?>
 <!doctype html>
 <html lang="en">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -36,14 +40,17 @@
     </nav>
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 35px;">
     <form action="login_db.php" method="post">
-    <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error">
+    <?php include('errors.php'); ?>
+        <?php if (isset($_SESSION['error'])) : ?>
+            <div class="error" style="color: rgb(255, 51, 51)">
+                <center>
                 <h3>
                     <?php 
                         echo $_SESSION['error'];
                         unset($_SESSION['error']);
                     ?>
                 </h3>
+                </center>
             </div>
         <?php endif ?>
   <div class="form-group">

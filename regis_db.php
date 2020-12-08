@@ -60,12 +60,12 @@
 
             $sql = "INSERT INTO user (nametitle, name, surname, dateofbirth, age, blood, address, email, phone, studentid, password, facalty, branch) VALUES ('$nametitle', '$name', '$surname', '$birth', '$age', '$blood', '$address', '$email', '$phonenum', '$studentid', '$password', '$facalty', '$branch')";
             mysqli_query($conn, $sql);
-            $_SESSION['name'] = $name;
+            $_SESSION['studentid'] = $studentid;
             $_SESSION['success'] = "เข้าสู่ระบบเรียบร้อย";
             header('location: enter.php');
         } else {
-            array_push($errors, "เลขประจำตัวนักศึกษานี้ได้เป็นสมาชิกอยู่แล้ว");
-            $_SESSION['error'] = "เลขประจำตัวนักศึกษานี้ได้เป็นสมาชิกอยู่แล้ว";
+            array_push($errors, "เกิดข้อผิดพลาด! กรุณาลองใหม่");
+            $_SESSION['error'] = "เกิดข้อผิดพลาด! กรุณาลองใหม่";
             header("location: regis.php");
         }
     }

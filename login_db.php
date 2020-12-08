@@ -17,7 +17,6 @@
         }
 
         if (count($errors) == 0) {
-            $password = md5($password);
             $query = "SELECT * FROM user WHERE studentid = '$studentid' AND password = '$password' ";
             $result = mysqli_query($conn, $query);
 
@@ -31,8 +30,8 @@
                 header("location: login.php");
             }
         } else {
-            array_push($errors, "Username & Password is required");
-            $_SESSION['error'] = "Username & Password is required";
+            array_push($errors, "เลขประจำตัวนักศึกษาหรือรหัสผ่านไม่ถูกต้อง");
+            $_SESSION['error'] = "เลขประจำตัวนักศึกษาหรือรหัสผ่านไม่ถูกต้อง";
             header("location: login.php");
         }
     }
