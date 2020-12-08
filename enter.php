@@ -58,7 +58,7 @@
       <label for="inputPassword2" class="sr-only">Password</label>
       <input type="password" class="form-control" id="inputPassword2" placeholder="รหัสสำหรับเข้าหอ">
     </div>
-  <center><button type="submit" class="btn" style="background-color: rgb(235, 191, 123)">ยืนยัน</button></center>
+  <center><button type="submit" class="btn" style="background-color: rgb(235, 191, 123) color: white;">ยืนยัน</button></center>
   </form>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
