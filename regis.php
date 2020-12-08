@@ -13,7 +13,7 @@
   </head>
 <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237,228,184)">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(227, 119, 80);">
-        <a class="navbar-brand" href="enter.php">
+        <a class="navbar-brand" href="index.php">
             <img src="nav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">KaoHor
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="enter.php">เข้าสู่หอพัก</a>
+                    <a class="nav-link" href="index.php">เข้าสู่หอพัก</a>
                 </li>
                 <li class="nav-item  active">
                     <a class="nav-link" href="regis.php">ลงทะเบียน<span class="sr-only">(current)</span></a>
@@ -38,16 +38,16 @@
         <form action="regis_db.php" method="post">
         <?php include('errors.php'); ?>
         <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error" style="color: rgb(255, 51, 51)">
-                <center>
-                <h3>
+            <center>
+            <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
+                <p style="margin:10px">
                     <?php 
                         echo $_SESSION['error'];
                         unset($_SESSION['error']);
                     ?>
-                </h3>
-                </center>
+                </p> 
             </div>
+            </center>
         <?php endif ?>
             <div class="container">
                 <h1 class="text-bold text-center">สมัครสมาชิกหอพัก</h1>
