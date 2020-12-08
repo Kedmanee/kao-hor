@@ -1,4 +1,7 @@
-<?php include('server.php');?>
+<?php
+    session_start();
+    include('server.php');
+?>
 <html>
   <head>
     <title>สมัครสมาชิก</title>
@@ -32,13 +35,21 @@
     </nav>
 
     <div style="margin-top: 3rem;" class="container shadow p-3 mb-5 bg-white rounded">
-    
+    <?php include('errors.php')?>
         <form action="regis_db.php" method="post">
+        <?php if (isset($_SESSION['error'])) : ?>
+            <div class="error">
+                <h3>
+                    <?php 
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
             <div class="container">
                 <h1 class="text-bold text-center">สมัครสมาชิกหอพัก</h1>
                                     <div class="form-group bmd-form-group label-floating is-empty">
-
-                                        <form>
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="nametitle">คำนำหน้า </label>
@@ -58,9 +69,6 @@
                                                     <input type="text" class="form-control" name="surname" placeholder="นามสกุล ">
                                                 </div>
                                             </div>
-                                        </form>
-
-                                        <form>
                                             <div class="form-row">
                                                 <div class="form-group col-md-7">
                                                     <label for="birth">วัน/เดือน/ปีเกิด <span class="text-danger">*</span></label>
@@ -98,25 +106,25 @@
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="inputAddress2">รหัสผ่าน <span class="text-danger">*</span></label></label>
-                                                    <input type="password" class="form-control" id="inputpassword1" placeholder="รหัสผ่าน ">
+                                                    <input type="password" class="form-control" name="password" id="inputpassword1" placeholder="รหัสผ่าน ">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="inputAddress2">ยืนยันรหัสผ่าน <span class="text-danger">*</span></label></label>
-                                                    <input type="password" class="form-control" id="inputpassword2" placeholder="ยืนยันรหัสผ่าน ">
+                                                    <input type="password" class="form-control" name="password2" id="inputpassword2" placeholder="ยืนยันรหัสผ่าน ">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label class="control-label" for="facalty">คณะ <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="facalty" class="form-control" id="idComment" placeholder="คณะ ">  
+                                                    <input type="text" class="form-control" name="facalty" class="form-control" placeholder="คณะ ">  
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label class="control-label" for="branch">สาขา <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="branch" class="form-control" id="idComment" placeholder="สาขา ">  
+                                                    <input type="text" class="form-control" name="branch" class="form-control" placeholder="สาขา ">  
                                                 </div>
                                                 <div class="form-group col-md-12 hidden" id="boxResponse">
                                                     <span class="serverResponse text-danger"></span>
                                                 </div>
                                                 <div class="form-group col-md-12 elem-mt elem-mb-mini">
-                                                    <button class="btn" style="background-color: rgb(235,191,123)" type="button" name="btnregister">สมัครบัญชี </button>
+                                                    <button class="btn" style="background-color: rgb(235,191,123)" type="submit" name="registeruser">สมัครบัญชี </button>
                                                 </div>
                                                 <div class="form-group col-md-12 elem-my-mini hidden-xs hidden-sm">
                                                     <div class="text-center">
@@ -125,7 +133,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
                                     </div>
                                 </div>
             </div>
