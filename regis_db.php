@@ -19,6 +19,7 @@
         $phonenum = mysqli_real_escape_string($conn, $_POST['phonenum']);
         $facalty = mysqli_real_escape_string($conn, $_POST['facalty']);
         $branch = mysqli_real_escape_string($conn, $_POST['branch']);
+
         if (empty($studentid)) {
             array_push($errors, "กรุณาใส่รหัสนักศึกษา");
             $_SESSION['error'] = "กรุณาใส่รหัสนักศึกษา";
@@ -55,16 +56,18 @@
         }
 
         if (count($errors) == 0) {
-            $password = $password1;
+            $password = md5($password1);
 
             $sql = "INSERT INTO user (nametitle, name, surname, dateofbirth, age, blood, address, email, phone, studentid, password, facalty, branch) VALUES ('$nametitle', '$name', '$surname', '$birth', '$age', '$blood', '$address', '$email', '$phonenum', '$studentid', '$password', '$facalty', '$branch')";
-            if (mysqli_query($conn, $sql)){
-                $_SESSION['name'] = $name;
-                $_SESSION['success'] = "เข้าสู่ระบบเรียบร้อย";
-                header('location: enter.php');
-            }else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            } 
+            mysqli_query($conn, $sql);
+            $_SESSION['name'] = $name;
+            $_SESSION['success'] = "เข้าสู่ระบบเรียบร้อย";
+            header('location: enter.php');
+        } else {
+            array_push($errors, "เลขประจำตัวนักศึกษานี้ได้เป็นสมาชิกอยู่แล้ว");
+            $_SESSION['error'] = "เลขประจำตัวนักศึกษานี้ได้เป็นสมาชิกอยู่แล้ว";
+            header("location: regis.php");
         }
     }
+
 ?>

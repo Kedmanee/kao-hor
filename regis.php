@@ -35,16 +35,18 @@
     </nav>
 
     <div style="margin-top: 3rem;" class="container shadow p-3 mb-5 bg-white rounded">
-    <?php include('errors.php')?>
         <form action="regis_db.php" method="post">
+        <?php include('errors.php'); ?>
         <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error">
+            <div class="error" style="color: rgb(255, 51, 51)">
+                <center>
                 <h3>
                     <?php 
                         echo $_SESSION['error'];
                         unset($_SESSION['error']);
                     ?>
                 </h3>
+                </center>
             </div>
         <?php endif ?>
             <div class="container">
@@ -124,7 +126,7 @@
                                                     <span class="serverResponse text-danger"></span>
                                                 </div>
                                                 <div class="form-group col-md-12 elem-mt elem-mb-mini">
-                                                    <button class="btn" style="background-color: rgb(235,191,123)" type="submit" name="registeruser">สมัครบัญชี </button>
+                                                    <button class="btn" style="background-color: rgb(235,191,123); color: white;" type="submit" name="registeruser">สมัครบัญชี </button>
                                                 </div>
                                                 <div class="form-group col-md-12 elem-my-mini hidden-xs hidden-sm">
                                                     <div class="text-center">
