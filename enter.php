@@ -37,13 +37,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="enter.html">เข้าสู่หอพัก<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="enter.php">เข้าสู่หอพัก<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="regis.html">ลงทะเบียน</a>
+            <a class="nav-link" href="regis.php">ลงทะเบียน</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile.html">ข้อมูลผู้ใช้</a>
+            <a class="nav-link" href="profile.php">ข้อมูลผู้ใช้</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="enter.php?logout='1'">ออกจากระบบ</a>
