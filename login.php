@@ -18,7 +18,7 @@
   <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237, 228, 184)">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(227, 119, 80);">
       <a class="navbar-brand" href="login.html">
-        <img src="nav.PNG" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        <img src="nav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         KaoHor
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

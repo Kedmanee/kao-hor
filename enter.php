@@ -28,7 +28,7 @@
   <body style="font-family: 'Kanit', sans-serif; background-color:rgb(237, 228, 184)">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(227, 119, 80);">
       <a class="navbar-brand" href="login.html">
-        <img src="nav.PNG" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        <img src="nav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         KaoHor
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
       </div>
     </nav>
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 35px;">
-    <center><img src="nav.PNG" style="width: 50%; height: auto;"></center>
+    <center><img src="nav.png" style="width: 50%; height: auto;"></center>
 <form class="container" style="margin-top: 1%">
     <div class="form-group mx-sm-3 mb-2">
       <label for="inputPassword2" class="sr-only">Password</label>
