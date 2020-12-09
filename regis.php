@@ -50,7 +50,8 @@
             </center>
         <?php endif ?>
             <div class="container">
-                <h1 class="text-bold text-center">สมัครสมาชิกหอพัก</h1>
+                <h3 class="text-bold text-center">สมัครสมาชิกหอพัก</h3>
+                <hr style="background-color:rgb(237, 228, 184); border: 2px solid rgb(237, 228, 184);">
                                     <div class="form-group bmd-form-group label-floating is-empty">
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
