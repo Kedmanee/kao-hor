@@ -34,7 +34,7 @@
         </div>
     </nav>
 
-    <div style="margin-top: 3rem;" class="container shadow p-3 mb-5 bg-white rounded">
+    <div style="margin-top: 3%;" class="container shadow p-3 mb-5 bg-white rounded">
         <form action="regis_db.php" method="post">
         <?php include('errors.php'); ?>
         <?php if (isset($_SESSION['error'])) : ?>
