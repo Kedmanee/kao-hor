@@ -38,7 +38,7 @@
         </ul>
       </div>
     </nav>
-    <div class="container p-3 shadow mb-5 bg-white rounded" style="margin-top: 35px;">
+    <div class="container p-3 shadow mb-5 bg-white rounded" style="margin-top: 3%;">
     <form action="login_db.php" method="post">
   <div class="form-group">
     <label for="student_id">เลขประจำตัวนักศึกษา</label>
