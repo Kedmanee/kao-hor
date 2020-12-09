@@ -51,7 +51,7 @@
         </ul>
       </div>
     </nav>
-    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 35px;">
+    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 3%;">
     <center><img src="nav.png" style="width: 50%; height: auto;"></center>
 <form class="container" style="margin-top: 1%">
     <div class="form-group mx-sm-3 mb-2">
