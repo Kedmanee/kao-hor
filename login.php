@@ -39,33 +39,31 @@
       </div>
     </nav>
     <div class="container p-3 shadow mb-5 bg-white rounded" style="margin-top: 3%;">
-    <form action="login_db.php" method="post">
-  <div class="form-group">
-    <label for="student_id">เลขประจำตัวนักศึกษา</label>
-    <input type="username" name="student_id" class="form-control" id="exampleInputUsername1">
-  </div>
-  <div class="form-group">
-    <label for="password">รหัสผ่าน</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="form-group form-check">
-  </div>
-  <?php include('errors.php'); ?>
-        <?php if (isset($_SESSION['error'])) : ?>
-            <center>
-            <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
-                <p style="margin:10px">
-                    <?php 
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                    ?>
-                </p> 
-            </div>
-            </center>
-        <?php endif ?>
-  <center><button type="submit" class="btn" name="loginuser" style="background-color: rgb(235, 191, 123); color: white; margin-top: 15px;">เข้าสู่ระบบ</button></center>
-</form>
-</div>
+      <form action="login_db.php" method="post">
+        <div class="form-group">
+          <label for="student_id">เลขประจำตัวนักศึกษา</label>
+          <input type="username" name="student_id" class="form-control" id="exampleInputUsername1">
+        </div>
+        <div class="form-group">
+          <label for="password">รหัสผ่าน</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <?php include('errors.php'); ?>
+              <?php if (isset($_SESSION['error'])) : ?>
+                  <center>
+                  <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
+                      <p style="margin:10px">
+                          <?php 
+                              echo $_SESSION['error'];
+                              unset($_SESSION['error']);
+                          ?>
+                      </p> 
+                  </div>
+                  </center>
+              <?php endif ?>
+        <center><button type="submit" class="btn" name="loginuser" style="background-color: rgb(235, 191, 123); color: white; margin-top: 15px;">เข้าสู่ระบบ</button></center>
+      </form>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
