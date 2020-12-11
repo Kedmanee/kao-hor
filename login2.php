@@ -7,6 +7,7 @@
   <head>
     <!-- Required meta tags -->
     <title>เข้าสู่ระบบ</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">

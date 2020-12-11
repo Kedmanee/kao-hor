@@ -15,6 +15,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="icon.png"/>
     <!-- Required meta tags -->
     <title>เข้าสู่หอพัก</title>
     <meta charset="utf-8">
@@ -58,7 +59,7 @@
             <p style="margin:10px">
               <?php 
                 echo $_SESSION['success'];
-                unset($_SESSION['sucess']);
+                unset($_SESSION['success']);
               ?>
             </p> 
           </div>
