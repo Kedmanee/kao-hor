@@ -8,7 +8,7 @@
         $pass = mysqli_real_escape_string($conn, $_POST['enterpass']);
 
         if (empty($pass)) {
-            array_push($errors, "กรุณาใส่เลขประจำตัวนักศึกษา");
+            array_push($errors, "กรุณาใส่รหัสสำหรับเข้าหอ");
         }
 
         if (count($errors) == 0) {
