@@ -1,6 +1,28 @@
 <?php
-    session_start();
     include('server.php');
+    $pass = mt_rand(100000, 999999);
+
+
+    $del = "DELETE FROM enter WHERE 1";
+    mysqli_query($conn, $del);
+    $sql = "INSERT INTO enter (pass) VALUES ('$pass')";
+
+    if (mysqli_query($conn, $sql)) {
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    } 
+
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "กรุณาเข้าสู่ระบบ";
+        header('location: login2.php');
+    }
+
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        header('location: login2.php');
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,7 +32,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta http-equiv="refresh" content="300; url=enter_db.php">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,33 +49,13 @@
         </li>
       </ul>
     </nav>
-    <div class="container p-3 shadow mb-5 bg-white rounded" style="margin-top: 3%;">
-      <form action="login2_db.php" method="post">
-        <div class="form-group">
-          <label for="username">ชื่อผู้ใช้</label>
-          <input type="username" name="username" class="form-control" id="exampleInputUsername1">
-        </div>
-        <div class="form-group">
-          <label for="password">รหัสผ่าน</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <?php include('errors.php'); ?>
-              <?php if (isset($_SESSION['error'])) : ?>
-                  <center>
-                  <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
-                      <p style="margin:10px">
-                          <?php 
-                              echo $_SESSION['error'];
-                              unset($_SESSION['error']);
-                          ?>
-                      </p> 
-                  </div>
-                  </center>
-              <?php endif ?>
-        <center><button type="submit" class="btn" name="loginuser2" style="background-color: rgb(235, 191, 123); color: white; margin-top: 15px;">เข้าสู่ระบบ</button></center>
-      </form>
-  </div>
-
+    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 3%; text-align:center;">
+        <center><img src="nav.png" style="width: 40%; height: auto;"></center>
+        <?php 
+        ?>
+        <h1>รหัสสำหรับเข้าหอ: <strong><?php echo $pass;?></strong></h1>
+        </form>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -65,5 +67,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-  </body>
-</html>
+</body>
+

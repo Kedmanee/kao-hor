@@ -23,7 +23,7 @@
             if (mysqli_num_rows($result) == 1) {
                 $_SESSION['username'] = $username;
                 $_SESSION['success'] = "เข้าสู่ระบบแล้ว";
-                header("location: random.php");
+                header("location: enter_db.php");
             } else {
                 array_push($errors, "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
                 $_SESSION['error'] = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";

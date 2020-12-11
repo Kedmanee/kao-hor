@@ -52,14 +52,14 @@
       </div>
     </nav>
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 3%;">
-    <center><img src="nav.png" style="width: 50%; height: auto;"></center>
-<form class="container" style="margin-top: 1%">
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="inputPassword2" class="sr-only">Password</label>
-      <input type="password" class="form-control" id="inputPassword2" placeholder="รหัสสำหรับเข้าหอ">
-    </div>
-  <center><button type="submit" class="btn" style="background-color: rgb(235, 191, 123); color: white;">ยืนยัน</button></center>
-  </form>
+      <center><img src="nav.png" style="width: 50%; height: auto;"></center>
+      <form class="container" style="margin-top: 1%">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="รหัสสำหรับเข้าหอ">
+          </div>
+        <center><button type="submit" class="btn" style="background-color: rgb(235, 191, 123); color: white;">ยืนยัน</button></center>
+      </form>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
