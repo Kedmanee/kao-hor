@@ -49,7 +49,7 @@
             $sql = "INSERT INTO user (nametitle, name, surname, dateofbirth, age, blood, address, email, phone, studentid, password, facalty, branch) VALUES ('$nametitle', '$name', '$surname', '$birth', '$age', '$blood', '$address', '$email', '$phonenum', '$studentid', '$password', '$facalty', '$branch')";
             mysqli_query($conn, $sql);
             $_SESSION['studentid'] = $studentid;
-            $_SESSION['success'] = "เข้าสู่ระบบเรียบร้อย";
+            $_SESSION['success'] = "ลงทะเบียนเรียบร้อย";
             header('location: index.php');
         } else {
             array_push($errors, "เกิดข้อผิดพลาด! กรุณากรอกข้อมูลใหม่");

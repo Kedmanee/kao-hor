@@ -22,7 +22,6 @@
 
             if (mysqli_num_rows($result) == 1) {
                 $_SESSION['studentid'] = $studentid;
-                $_SESSION['success'] = "เข้าสู่ระบบแล้ว";
                 header("location: index.php");
             } else {
                 array_push($errors, "เลขประจำตัวนักศึกษาหรือรหัสผ่านไม่ถูกต้อง");

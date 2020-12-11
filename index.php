@@ -52,6 +52,18 @@
       </div>
     </nav>
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 3%;">
+        <?php if (isset($_SESSION['success'])) {?>
+          <center>
+          <div class="error shadow rounded d-inline-flex" style="background-color: rgb(51, 204, 51); color: white;">
+            <p style="margin:10px">
+              <?php 
+                echo $_SESSION['success'];
+                unset($_SESSION['sucess']);
+              ?>
+            </p> 
+          </div>
+          </center>
+        <?php } ?>
       <center><img src="nav.png" style="width: 50%; height: auto;"></center>
       <form action="enter_check.php" style="margin-top: 1%" method="post">
           <div class="form-group mx-sm-3 mb-2">
