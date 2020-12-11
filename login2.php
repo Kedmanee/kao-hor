@@ -4,13 +4,13 @@
 ?>
 <!doctype html>
 <html lang="en">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
   <head>
     <!-- Required meta tags -->
+    <title>เข้าสู่ระบบ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,11 +31,11 @@
       <form action="login2_db.php" method="post">
         <div class="form-group">
           <label for="username">ชื่อผู้ใช้</label>
-          <input type="username" name="username" class="form-control" id="exampleInputUsername1">
+          <input type="username" name="username" class="form-control">
         </div>
         <div class="form-group">
           <label for="password">รหัสผ่าน</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" name="password" class="form-control">
         </div>
         <?php include('errors.php'); ?>
               <?php if (isset($_SESSION['error'])) : ?>

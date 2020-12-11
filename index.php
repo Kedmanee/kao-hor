@@ -14,13 +14,13 @@
 ?>
 <!doctype html>
 <html lang="en">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
   <head>
     <!-- Required meta tags -->
+    <title>เข้าสู่หอพัก</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -53,12 +53,25 @@
     </nav>
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 3%;">
       <center><img src="nav.png" style="width: 50%; height: auto;"></center>
-      <form class="container" style="margin-top: 1%">
+      <form action="enter_check.php" style="margin-top: 1%" method="post">
           <div class="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" class="sr-only">Password</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="รหัสสำหรับเข้าหอ">
+            <input type="text" class="form-control" name="enterpass" placeholder="รหัสสำหรับเข้าหอ">
           </div>
-        <center><button type="submit" class="btn" style="background-color: rgb(235, 191, 123); color: white;">ยืนยัน</button></center>
+          <?php include('errors.php'); ?>
+              <?php if (isset($_SESSION['error'])) : ?>
+                  <center>
+                  <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
+                      <p style="margin:10px">
+                          <?php 
+                              echo $_SESSION['error'];
+                              unset($_SESSION['error']);
+                          ?>
+                      </p> 
+                  </div>
+                  </center>
+              <?php endif ?>
+        <center><button type="submit" name="submitpass" class="btn" style="background-color: rgb(235, 191, 123); color: white; margin-top: 15px;">ยืนยัน</button></center>
       </form>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
