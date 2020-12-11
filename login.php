@@ -49,6 +49,18 @@
           <label for="password">รหัสผ่าน</label>
           <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         </div>
+        <?php if (isset($_SESSION['msg'])) {?>
+          <center>
+          <div class="error shadow rounded d-inline-flex" style="background-color: rgb(255, 77, 77); color: white;">
+            <p style="margin:10px">
+              <?php 
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+              ?>
+            </p> 
+          </div>
+          </center>
+        <?php } ?>
         <?php include('errors.php'); ?>
               <?php if (isset($_SESSION['error'])) : ?>
                   <center>
